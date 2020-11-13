@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Slide 1 -->
+				<section data-markdown>
+					<textarea data-template>
+						#### Git and Version Controlling
+						* Git is a distributed version-control system for tracking changes in source code during software development.
+						* Developed for contribution of Linux Kernel
+						* Originally developed by Linus Torvalds
+					</textarea>
+				</section>
+
+				<!-- Slide 2 -->
+				<section data-markdown>
+					<textarea data-template>
+						#### What is github?
+						* Github provides hosting for software development and version control using Git. It offers the distributed version control and source code management functionality of Git, plus its own features.
+						(source- Wikipedia.org)
+					</textarea>
+				</section>
+
+				<!-- slide 3 -->
+				<section data-markdown>
+					<textarea data-template>
+						#### Walkthrough to Github
+						* Exploring Github
+						* Creating repository on Github
+						* Initializing repository on machine
+						<pre><code data-trim data-noescape>
+							$git init .
+						</code></pre>
+					</textarea>
+				</section>
+
+				<!-- slide 4 -->
+				<section data-markdown>
+					<textarea data-template>
+						#### Steps to push code on repo 
+						- First we add any changes done in our code. This takes your code to staging area
+						- Once code is in staging area it needs to be added to commit area
+						- After commiting your code is in commited area but still not on github
+						- To push our code, we need to set our upstream that is URI that points to our github repo
+						- The last thing to do is push th code
+					</textarea>
+				</section>
+
+					<!--slide 5  -->
+					<section data-markdown>
+						<textarea data-template>
+							#### Steps
+							<pre><code data-trim data-noescape>
+								 $git add filename / git add * / git add . //adding to staging area
+								 
+								 $git commit -m "Comment that distingush your other commits" //commit area
+
+								 $git remote add origin URI 	//setting upstream
+
+								 $git push -u origin master
+							</code></pre>
+						</textarea>
+					</section>
+
+					<!-- slide 6 -->
+					<section data-markdown>
+						<textarea data-template>
+							#### Branching
+							* Branching is necessary to make changes more simple and visible
+							* It makes managing whole repository easier
+						</textarea>
+					</section>
+
+					<!-- slide 7 -->
+					<section data-markdown>
+						<textarea data-template>
+							#### Branching Commands
+							<pre><code data-trim data-noescape>
+								$git branch // gives current working branch
+
+								$git checkout v1 //takes you to v1 branch
+								
+								$git checkout -b v1 //creates and takes you to v1 branch
+							</code></pre>
+						</textarea>
+					</section>
+
+					<!-- slide 8 -->
+					<section data-markdown>
+						<textarea data-template>
+							#### Merging Branches
+							* It's always good idea to use github rather than command line tool to merge branches
+							* creating pull request
+							* comparing and pulling
+						</textarea>
+					</section>
+
+					<!-- slide 9 -->
+					<section data-markdown>
+						<textarea data-template>
+							#### Undoing in Git
+							<pre><code data-trim data-noescape>
+								$git reset //to reset added changes
+
+								$git log //to check previous commits
+
+								$git reset HEAD~1 //to rollback latest changes
+							</code></pre>
+						</textarea>
+					</section>
+
+					<!-- slide 10 -->
+					<section data-markdown>
+						<textarea data-template>
+							#### Some More Commands
+							<pre><code data-trim data-noescape>
+								$git diff
+
+								$git status
+
+								$git pull
+
+								$git clone
+
+								$git stash
+							</code></pre>
+						</textarea>
+					</section>
+
+					<!-- slide 11 -->
+					<section data-markdown>
+						Thank you!					
+					</section>
+					
+				 
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
